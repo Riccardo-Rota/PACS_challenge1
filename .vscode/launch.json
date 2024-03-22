@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+
+
+        
+        {
+            "name": "Run Program with Makefile",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/main",
+            "preLaunchTask": "build", // Specifica il task che esegue la build
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb"
+        }
+    ]
+}
