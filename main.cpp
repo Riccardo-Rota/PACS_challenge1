@@ -3,11 +3,9 @@
 #include <functional>
 #include <cmath>
 #include <string>
-#include "muParser.h"
 
 int main(){
     
-    mu::Parser p1;
     //definition of f
     auto f = [](Point x) -> double { return x[0] * x[1] + 4 * pow(x[0], 4) + pow(x[1], 2) + 3 * x[0]; };
 
