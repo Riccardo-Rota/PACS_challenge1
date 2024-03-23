@@ -1,0 +1,10 @@
+{
+    "step_tol": 1e-6,
+    "res_tol": 1e-6,
+    "max_iter": 1e6,
+    "alpha_0" : 0.1,
+    "sigma": 0.25,
+    "mu": 0.2,
+    "h": 1e-2,
+    "eta": 0.9
+}
