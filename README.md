@@ -1,6 +1,9 @@
 PACS Challenge 1 - Riccardo Rota
 
-You can build the executable just typing make, then the makefile also define an istruction "clean" to remove it.
+IMPORTANT: in order to make the makefile work you have to change the variable JSONPATH in the Makefile,
+copying the path to the repository containing the library.
+
+Then you can build the executable just typing make, then the makefile also define an istruction "clean" to remove it.
 
 For my implementation I developed a class Point, in order to manage operation with vectors. 
 It includes a std::vector containing the coordinates and a size_t to store the dimension of the point.
