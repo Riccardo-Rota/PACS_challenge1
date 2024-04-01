@@ -6,6 +6,7 @@
 #include "point.hpp"
 #include<functional>
 
+//@note good the use of namespaces!
 namespace gm{
 
     //definition of types
@@ -39,6 +40,10 @@ namespace gm{
     };
 
     //Definition of the centered finite difference algorithm to evaluate the gradient
+    //@note Take the habit of using const& to pass objects different than POD. It is more
+    //efficient and safer.
+    // Point gradient_fd(func cont & f, Point const & x, double h);
+    
     Point gradient_fd(func f, Point x, double h);
 
     //Definition of the different rules for alpha
@@ -76,7 +81,7 @@ namespace gm{
             if constexpr (gradient_setting == exact){
                 grad_x = data.grad_f(x);
             }
-
+// @note I would have used an else here, but it is a matter of taste
             if constexpr (gradient_setting == fd){
                 grad_x = gradient_fd(data.f, x, par.h);
             }
@@ -87,6 +92,7 @@ namespace gm{
                 if constexpr (step_choice == armijo){
                     alpha = armijo_rule(x, data.f, grad_x, par.alpha_0, par.sigma);
                 }
+                //@note I would have used else if here, but it is a matter of taste
                 if constexpr (step_choice == inverse){
                     alpha = inverse_rule(par.alpha_0, n_iter, par.mu);
                 }

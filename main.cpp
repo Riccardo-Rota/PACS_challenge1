@@ -66,40 +66,40 @@ int main(){
     //YOU CAN UNCOMMENT THE FOLLOWING BLOCKS TO SEE THE APPLICATION OF DIFFERENT METHODS OR DIFFERENT OPTIONS, 
     //TRYING DIFFERENT COMBINATIONS
 
-    // std::cout << "Applying the gradient method with constant alpha and fd gradient" << std::endl;
-    // p.alpha_0 = 0.1;
-    // Point x1 = gm::minimize<gm::gradient, gm::fd, gm::constant>(d,p);
-    // std::cout << "Minimum found at: ";
-    // x1.print();
+     std::cout << "Applying the gradient method with constant alpha and fd gradient" << std::endl;
+     p.alpha_0 = 0.1;
+     Point x1 = gm::minimize<gm::gradient, gm::fd, gm::constant>(d,p);
+     std::cout << "Minimum found at: ";
+     x1.print();
 
 
-    // std::cout << "Applying the gradient method with inverse rule and the exact gradient given by the user" << std::endl;
-    // p.alpha_0 = 0.1;
-    // Point x2 = gm::minimize<gm::gradient, gm::exact, gm::inverse>(d,p);
-    // std::cout << "Minimum found at: ";
-    // x2.print();
+     std::cout << "Applying the gradient method with inverse rule and the exact gradient given by the user" << std::endl;
+     p.alpha_0 = 0.1;
+     Point x2 = gm::minimize<gm::gradient, gm::exact, gm::inverse>(d,p);
+     std::cout << "Minimum found at: ";
+     x2.print();
 
 
-    // std::cout << "Applying the gradient method with exponential rule and fd gradient" << std::endl;
-    // p.alpha_0 = 0.1;
-    // Point x3 = gm::minimize<gm::gradient, gm::exact, gm::inverse>(d,p);
-    // std::cout << "Minimum found at: ";
-    // x3.print();
+    std::cout << "Applying the gradient method with exponential rule and fd gradient" << std::endl;
+    p.alpha_0 = 0.1;
+    Point x3 = gm::minimize<gm::gradient, gm::exact, gm::inverse>(d,p);
+    std::cout << "Minimum found at: ";
+    x3.print();
 
 
-    // std::cout << "Applying the momentum method with the exact gradient given by the user" << std::endl;
-    // p.alpha_0 = 0.04;
-    // p.eta = 1 - p.alpha_0;
-    // Point x4 = gm::minimize<gm::momentum, gm::exact>(d,p);
-    // std::cout << "Minimum found at: ";
-    // x4.print();
+    std::cout << "Applying the momentum method with the exact gradient given by the user" << std::endl;
+    p.alpha_0 = 0.04;
+    p.eta = 1 - p.alpha_0;
+    Point x4 = gm::minimize<gm::momentum, gm::exact>(d,p);
+    std::cout << "Minimum found at: ";
+    x4.print();
 
 
-    // std::cout << "Applying the Nesterov method with fd gradient" << std::endl;
-    // p.alpha_0=0.02;
-    // p.eta = 1 - p.alpha_0;
-    // Point x5 = gm::minimize<gm::nesterov, gm::fd>(d,p);
-    // std::cout << "Minimum found at: ";
-    // x5.print();
+    std::cout << "Applying the Nesterov method with fd gradient" << std::endl;
+    p.alpha_0=0.02;
+    p.eta = 1 - p.alpha_0;
+    Point x5 = gm::minimize<gm::nesterov, gm::fd>(d,p);
+    std::cout << "Minimum found at: ";
+    x5.print();
     
 }

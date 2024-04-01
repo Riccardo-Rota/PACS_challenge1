@@ -43,6 +43,13 @@ void Point::print() const{
     std::cout << coordinates[dim-1] << " )" << std::endl;
 }
 
+
+//@note The good rule is to first define the *= operator as
+//      a member function, and then define the * operator as
+//      a friend function. This is because the *= operator
+//      modifies the object, while the * operator does not.
+
+
 Point operator*(double a, Point x){
     size_t n=x.get_dim();
     vector<double> vx= x.get_coordinates();

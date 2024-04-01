@@ -1,0 +1,5 @@
+You should not have binary executables in a git repository!
+
+Why are you using such a strange path for the json include directory?
+
+Strange that Momentum and Nesterove behave so badly. The choiche of alphs in these methods is a bit creitical since you cannot apply Armijio directly. You can still do it but first you need to check whether the direction is a descent direction.
